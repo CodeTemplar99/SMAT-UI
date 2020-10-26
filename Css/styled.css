@@ -1,0 +1,108 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 100%;
+    transition: all .2s ease;
+}
+
+.navbar {
+    background: inherit;
+    padding: 0px;
+    /* border: 1px solid red; */
+}
+
+nav .container {
+    /* border: 1px solid red; */
+    padding: 0;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #405daf !important;
+}
+
+.collapse {
+    position: absolute;
+    right: 0%;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0px 0px 0px 30px !important;
+}
+
+.btn {
+    color: white;
+    /* background: #499bb6 !important; */
+    background: #405daf !important;
+    border: hidden;
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .5rem 1.75rem !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.c1 {
+    background: #405daf0a;
+}
+
+.s1 {
+    height: 92vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    position: relative;
+    margin-top: 65px !important;
+}
+
+.s1_text_con {
+    /* border: 1px solid red; */
+    width: 60vh;
+}
+
+.s1_img_con {
+    /* border: 1px solid red; */
+    width: 60vh;
+    height: 60vh;
+    background: url("/images/undraw_Group_chat_unwm.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.s1_text_con :first-child {
+    font-size: 4rem;
+    line-height: 1.3;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.s1-detail {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #00729b !important;
+
+}
+
+.arrow-down {
+    position: relative;
+    /* border: 1px solid red; */
+    font-size: 46px;
+    font-weight: bold;
+    transform: rotate(180deg) !important;
+    animation: reBounce 2s linear 0s infinite !important;
+    cursor: pointer;
+}

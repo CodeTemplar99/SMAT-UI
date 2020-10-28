@@ -2,29 +2,28 @@ new Vue({
     el: '#app',
     data: {
         sign_up_con: true,
-        // sign_up_btn:false,
+        login_btn:true,
         login_con: false,
-        login_btn:true
+        sign_up_btn:false
 
     },
     methods: {
-        switch_to_login: function () {
-            if (this.show_sign_up_form = true) {
-                this.show_sign_up_form = false;
-                this.sign_up_form_text = false;
-                this.login_form_text = true;
+        to_login: function () {
+            if (this.sign_up_con = true) {
+                this.login_con = true;
+                this.sign_up_con = false;
             }
+            
         },
-        switch_to_sign_up: function () {
-            if (this.show_login_form = true) {
-                this.show_sign_up_form = true;
-                this.sign_up_form_text = true;
-                this.login_form_text = false;
+
+        to_sign_up: function () {
+            if (this.login_con = true) {
+                this.sign_up_btn = true;
+                this.sign_up_con = true;
+                this.login_con = false;
+                this.login_btn = false;
             }
-        },
-        show_recovery_path: function () {
-            this.setup_con = false;
-            this.recovery_con = true
+            
         }
     }
 })

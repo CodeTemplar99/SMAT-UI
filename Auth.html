@@ -69,8 +69,8 @@
                 </a>
             </div>
             <div class="buy-button">
-                <a href="#" target="_blank" class="btn btn-info rounded-pill mr-sm-1">login here</a>
-                <a href="./Auth.html" target="_blank" class="btn btn-primary">Sign up Now</a>
+                <a href="#" class="btn btn-info rounded-pill mr-sm-1" v-if="login_btn" @click="to_login">login here</a>
+                <a href="./Auth.html" class="btn btn-primary" v-else @click="to_sign_up">Sign up Now</a>
             </div>
             <!--end login button-->
             <!-- End Logo container-->
@@ -99,8 +99,8 @@
                 </ul>
                 <!--end navigation menu-->
                 <div class="buy-menu-btn d-none">
-                    <a href="#" target="_blank" class="btn btn-info rounded-lg m-0">login here</a><br><br>
-                    <a href="./Auth.html" target="_blank" class="btn btn-primary m-0">Sign up
+                    <a href="#" class="btn btn-info rounded-lg m-0">login here</a><br><br>
+                    <a href="./Auth.html" class="btn btn-primary m-0">Sign up
                         Now</a>
                 </div>
                 <!--end login button-->
@@ -114,10 +114,10 @@
 
     <!-- Hero Start -->
     <section class="bg-half-170 d-table w-100">
-        <div class="container">
+        <div class="container" id="app">
             <div class="row align-items-center">
-                <div class="col-md-6 shadow-lg p-4">
-                <h3 class="lead font-weight-bold">Welcome,<br>
+                <div class="col-md-6 shadow-lg p-4" v-show="sign_up_con">
+                 <h3 class="lead font-weight-bold">Welcome,<br>
                  <span class="small font-weight-light">sign up to start using SMTV today</span></h3>
                     <form>
                         <div class="form-group">
@@ -141,7 +141,25 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
-                <!--end col-->
+                <!--end col for sign up-->
+
+                 <div class="col-md-6 shadow-lg p-4" v-show="login_con">
+                 <h3 class="lead font-weight-bold">Hello,<br>
+                 <span class="small font-weight-light">Login to start using SMTV today</span></h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-info">Login</button>
+                    </form>
+                </div>
+                <!--end col for log in-->
 
                 <div class="col-md-6 p-5">
                     <img src="./images/undraw_Add_user_re_5oib.svg" class="img-fluid" alt="">
@@ -249,6 +267,8 @@
     <script src="./SMTV_assets/switcher.js.download"></script>
     <!-- Main Js -->
     <script src="./SMTV_assets/app.js.download"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/spine.js"></script>
 
 </body>
 

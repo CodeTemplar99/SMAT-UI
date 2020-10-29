@@ -43,10 +43,5 @@ new Vue({
 let bal= 0
 function showBar() {
     bal++
-    if (bal % 2 != 0) {
-        $('#exampleModal').modal('show')
-    }
-    else {
-        $('#exampleModal').modal('hide')
-    }
+    (bal % 2 != 0) ? $('#exampleModal').modal('show') : $('#exampleModal').modal('hide');
 }

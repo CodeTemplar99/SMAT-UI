@@ -118,7 +118,7 @@
         <section class="bg-half-170 d-table w-100">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-6 shadow-lg p-4" v-if="sign_up_con">
+                    <div class="col-md-6 shadow-lg p-4" v-show="sign_up_con">
                         <h3 class="lead font-weight-bold">Welcome,<br>
                             <span class="small font-weight-light">sign up to start using SMTV today</span></h3>
                         <form>
@@ -146,7 +146,7 @@
                     </div>
                     <!--end col for sign up-->
 
-                    <div class="col-md-6 shadow-lg p-4" v-else>
+                    <div class="col-md-6 shadow-lg p-4" v-show="login_con">
                         <h3 class="lead font-weight-bold">Hello,<br>
                             <span class="small font-weight-light">Login to start using SMTV today</span></h3>
                         <form>
@@ -159,10 +159,30 @@
                                 <input type="password" class="form-control">
                             </div>
 
+                            <div class="form-group form-check px-2">
+                                <label class="form-check-label" for="exampleCheck1">Forgot password? <a
+                                        class="text-primary" for="exampleCheck1" @click="recovery_mode">click
+                                        here</a></label>
+                            </div>
+
                             <button type="submit" class="btn btn-info">Login</button>
                         </form>
                     </div>
                     <!--end col for log in-->
+
+                    <div class="col-md-6 shadow-lg p-4" v-show="recovery_con">
+                        <h3 class="lead font-weight-bold">You are in recovery mode,<br>
+                            <span class="small font-weight-light">Enter your email on sign up to proceed to
+                                recovery</span></h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <!--end col for recovery-->
 
                     <div class="col-md-6 p-5">
                         <img src="./images/undraw_Add_user_re_5oib.svg" class="img-fluid" alt="">

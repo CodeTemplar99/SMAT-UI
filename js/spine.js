@@ -4,7 +4,8 @@ new Vue({
         sign_up_con: true,
         login_btn:true,
         login_con: false,
-        sign_up_btn:false
+        sign_up_btn:false,
+        recovery_con:false
 
     },
     methods: {
@@ -14,6 +15,7 @@ new Vue({
                 this.login_con = true;
                 this.login_btn = false;
                 this.sign_up_con = false;
+                this.recovery_con = false;
             }
             
         },
@@ -22,9 +24,16 @@ new Vue({
             if (this.login_con = true) {
                  this.sign_up_btn = false;
                 this.login_con = false;
+                this.recovery_con = false;
                 this.login_btn = true;
                 this.sign_up_con = true;
             }
+            
+        },
+        recovery_mode: function () {
+            this.login_con = false;
+            this.recovery_con = true;
+            console.log("clicked");
             
         }
     }

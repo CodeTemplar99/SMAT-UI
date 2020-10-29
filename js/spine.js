@@ -36,5 +36,17 @@ new Vue({
             console.log("clicked");
             
         }
+        
     }
 })
+
+let bal= 0
+function showBar() {
+    bal++
+    if (bal % 2 != 0) {
+        $('#exampleModal').modal('show')
+    }
+    else {
+        $('#exampleModal').modal('hide')
+    }
+}

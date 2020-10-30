@@ -40,8 +40,26 @@ new Vue({
     }
 })
 
-let bal= 0
+let a= 0
+function show_Dm_options() {
+    a++
+    (a % 2 != 0) ? $('#DM_preference_modal').modal('show') : $('#DM_preference_modal').modal('hide');
+}
+
+let b= 0
+function showWhatsApp() {
+    b++
+    (b % 2 != 0) ? $('#whatsApp_account_modal').modal('show') : $('#whatsApp_account_modal').modal('hide');
+}
+
+let c= 0
+function showTwitter() {
+    c++
+    (c % 2 != 0) ? $('#twitter_account_modal').modal('show') : $('#twitter_account_modal').modal('hide');
+}
+
+let d= 0
 function showBar() {
-    bal++
-    (bal % 2 != 0) ? $('#exampleModal').modal('show') : $('#exampleModal').modal('hide');
+    d++
+    (d % 2 != 0) ? $('#delete_account_modal').modal('show') : $('#delete_account_modal').modal('hide');
 }

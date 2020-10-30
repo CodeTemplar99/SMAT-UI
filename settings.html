@@ -96,7 +96,7 @@
 
                                 <h6 class="font-weight-light">Enable DM options</h6>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" onclick="show_Dm_options()">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -107,7 +107,7 @@
                                 class="jumbotron rounded-0 m-0 mb-1 d-flex justify-content-between align-items-center p-2">
                                 <h6 class="font-weight-light">WhatsApp</h6>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" onclick="showWhatsApp()">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -115,7 +115,7 @@
                             <div class="jumbotron rounded-0 m-0 d-flex justify-content-between align-items-center p-2">
                                 <h6 class="font-weight-light">Twitter</h6>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" onclick="showTwitter()">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -126,7 +126,7 @@
                         <li class="list-group-item border d-flex align-items-center">
                             <p class="m-0 mr-sm-2 font-weight-light d-inline">Delete Account</p>
                             <label class="switch">
-                                <input type="checkbox" onfocus="showBar()">
+                                <input type="checkbox" onclick="showBar()">
                                 <span class="slider round"></span>
                             </label>
                         </li>
@@ -151,22 +151,89 @@
         </div>
         <!--end container-->
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <!-- DM modal -->
+        <div class="modal fade" id="DM_preference_modal" tabindex="-1" role="dialog"
+            aria-labelledby="DM_preferenceModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
+                        <h5 class="modal-title" id="DMModalLabel">Enable DM Options</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of DM account modal -->
+
+        <!-- WhatsApp modal -->
+        <div class="modal fade" id="whatsApp_account_modal" tabindex="-1" role="dialog"
+            aria-labelledby="whatsAppModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="whatsAppModalLabel">Enable DM for WhatsApp</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of WhatsApp account modal -->
+
+        <!-- twitter modal -->
+        <div class="modal fade" id="twitter_account_modal" tabindex="-1" role="dialog"
+            aria-labelledby="twitterModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="twitterModalLabel">Enable DM for Twitter</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of twitter account modal -->
+
+        <!-- delete account modal -->
+        <div class="modal fade" id="delete_account_modal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Delete Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
+                    </div>
+                    <div class="modal-footer p-0">
+                        <button type="button" class="btn btn-danger" onclick="delete_account()">Delete Account</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
 
                 </div>
             </div>
         </div>
+        <!--end of delete account modal -->
+    </section>
+    <!--end section-->
     </section>
     <!--end section-->
 

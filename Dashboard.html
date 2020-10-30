@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>SMTV | Home</title>
+    <title>SMTV | Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="./SMTV_assets/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -82,67 +82,97 @@
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="bg-half-170 d-table w-100" id="app">
+    <section class="bg-half-170 d-table w-100" id="app" style="padding-top: 120px;">
         <div class="container">
             <div class="row align-items-center justify-content-center">
-                <div class="col-md-8 shadow-lg py-2 p-2 mx-2">
-                    <ul class="list-group">
-                        <li class="list-group-item border-0 mt-3 mb-0 p-2">
-                            <p class="lead font-weight-bold my-0">Settings</p>
-                        </li>
-                        <li class="list-group-item p-2 border">
-                            <div
-                                class="jumbotron bg-transparent m-0 d-flex justify-content-between align-items-center p-2">
-
-                                <h6 class="font-weight-light">Enable DM options</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="show_Dm_options()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-3">
-                            <p class="font-weight-bold">DM Preference</p>
-                            <div
-                                class="jumbotron rounded-0 m-0 mb-1 d-flex justify-content-between align-items-center p-2">
-                                <h6 class="font-weight-light">WhatsApp</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="showWhatsApp()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-
-                            <div class="jumbotron rounded-0 m-0 d-flex justify-content-between align-items-center p-2">
-                                <h6 class="font-weight-light">Twitter</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="showTwitter()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 mt-3 mb-0 p-2">
-                            <p class="text-danger font-weight-bold my-0">Danger Zone</p>
-                        </li>
-                        <li class="list-group-item border d-flex align-items-center">
-                            <p class="m-0 mr-sm-1">Lorem ipsum dolor sit amet consectetur adipisicing </p>
-                            <a class=" btn btn-outline-danger m-0 ml-sm-2 font-weight-light d-inline"
-                                onclick="showBar()">Delete
-                                Account</a>
-                        </li>
-                    </ul>
-
-                    <!-- <div class="toggle-button-cover">
-                        <div class="button-cover">
-                            <div class="button r" id="button-3">
-                                <input type="checkbox" class="checkbox">
-                                <div class="knobs"></div>
-                                <div class="layer"></div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Rounded switch -->
-
-
+                <div class="col-md-10 shadow-lg py-2 p-2 mx-2">
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10</th>
+                                <td>@twitter</td>
+                                <td>Larry the Bird</td>
+                                <td>@fat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <!--end col-->
             </div>

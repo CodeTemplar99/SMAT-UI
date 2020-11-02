@@ -4596,6 +4596,10 @@ p {
 }
 
 @media (max-width: 768px) {
+.buy-button{
+  display: none;
+}
+
   .cover-user .padding-less {
     position: relative !important;
     height: 400px !important;
@@ -4948,4 +4952,8 @@ p {
   left: 20% !important;
 }
 
+.main-view{
+  margin-left:0px !important;
+  margin-right:0px !important;
+}
 }

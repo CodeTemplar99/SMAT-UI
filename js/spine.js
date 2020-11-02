@@ -40,6 +40,7 @@ new Vue({
     }
 })
 
+
 let a= 0
 function show_Dm_options() {
     a++

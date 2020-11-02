@@ -2774,6 +2774,9 @@ p {
   #topnav .buy-button {
     display: none;
   }
+  .menu-extras{
+  display: block !important;
+} 
   #topnav .buy-menu-btn {
     display: block !important;
     margin: 0 10px;
@@ -4596,9 +4599,9 @@ p {
 }
 
 @media (max-width: 768px) {
-.buy-button{
+.menu-extras{
   display: none;
-}
+} 
 
   .cover-user .padding-less {
     position: relative !important;

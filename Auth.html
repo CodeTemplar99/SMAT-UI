@@ -141,7 +141,10 @@
                                 <input type="text" class="form-control">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button><br><br>
+                            <span>Do you have an account?</span> <a class="text-primary" v-show="login_btn"
+                                @click="to_login">
+                                login here</a>
                         </form>
                     </div>
                     <!--end col for sign up-->
@@ -165,7 +168,9 @@
                                         here</a></label>
                             </div>
 
-                            <button type="submit" class="btn btn-info">Login</button>
+                            <button type="submit" class="btn btn-info">Login</button><br><br>
+                            <span>No account yet?</span> <a class="text-primary" v-show="sign_up_btn"
+                                @click="to_sign_up">Sign up here</a>
                         </form>
                     </div>
                     <!--end col for log in-->
@@ -179,7 +184,9 @@
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" class="form-control">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button><br><br>
+                            <span>No account yet?</span> <a class="text-primary" v-show="sign_up_btn"
+                                @click="to_sign_up">Sign up here</a>
                         </form>
                     </div>
                     <!--end col for recovery-->

@@ -2785,6 +2785,10 @@ p {
   #topnav .navbar-toggle .lines {
     margin-right: 0 !important;
   }
+  .title-heading .btn {
+    position: relative;
+    left: 25% !important;
+  }
 }
 
 .bg-home {
@@ -4952,11 +4956,22 @@ p {
 }
 .title-heading .btn{
   position: relative;
-  left: 20% !important;
+  left: 28% !important;
 }
 
 .main-view{
   margin-left:0px !important;
   margin-right:0px !important;
 }
+}
+
+@media only screen and (max-width: 375px) {
+  .title-heading .btn {
+    left: 24% !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .title-heading .btn {
+    left: 20% !important;
+  }
 }

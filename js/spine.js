@@ -40,6 +40,14 @@ new Vue({
     }
 })
 
+document.querySelector('#login_tweak_btn').addEventListener('click', () => {
+  stored = localStorage.setItem('value', 1);
+  setTimeout(() => {
+    window.open("./auth.html")
+    console.log(stored)
+  }, 2000);
+
+})
 
 let a= 0
 function show_Dm_options() {

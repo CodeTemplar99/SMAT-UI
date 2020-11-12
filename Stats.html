@@ -16,6 +16,7 @@
     <link href="./Css/style.css" rel="stylesheet" type="text/css" id="theme-opt">
     <link href="./Css/default.css" rel="stylesheet" id="color-opt">
     <link href="./Css/settings.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
     <style>
         :root {
             --uim-primary-opacity: 1;
@@ -139,61 +140,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-8 shadow-lg py-2 p-2 mx-2 main-view">
-                    <ul class="list-group">
-                        <li class="list-group-item border-0 mt-3 mb-0 p-2">
-                            <p class="lead font-weight-bold my-0">Settings</p>
-                        </li>
-                        <li class="list-group-item p-2 border">
-                            <div
-                                class="jumbotron bg-transparent m-0 d-flex justify-content-between align-items-center p-2">
-
-                                <h6 class="font-weight-light">Enable DM options</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="show_Dm_options()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item px-3">
-                            <p class="font-weight-bold">DM Preference</p>
-                            <div
-                                class="jumbotron rounded-0 m-0 mb-1 d-flex justify-content-between align-items-center p-2">
-                                <h6 class="font-weight-light">WhatsApp</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="showWhatsApp()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-
-                            <div class="jumbotron rounded-0 m-0 d-flex justify-content-between align-items-center p-2">
-                                <h6 class="font-weight-light">Twitter</h6>
-                                <label class="switch">
-                                    <input type="checkbox" onclick="showTwitter()">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0 mt-3 mb-0 p-2">
-                            <p class="text-danger font-weight-bold my-0">Danger Zone</p>
-                        </li>
-                        <li class="list-group-item border d-flex align-items-center">
-                            <!-- <p class="m-0 mr-sm-1">consectetur adipisicing </p> -->
-                            <a class=" btn btn-outline-danger m-0 ml-sm-2 font-weight-light" onclick="showBar()">Delete
-                                Account</a>
-                        </li>
-                    </ul>
-
-                    <!-- <div class="toggle-button-cover">
-                        <div class="button-cover">
-                            <div class="button r" id="button-3">
-                                <input type="checkbox" class="checkbox">
-                                <div class="knobs"></div>
-                                <div class="layer"></div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- Rounded switch -->
-
+                    <canvas width="500" id="myChart"></canvas>
 
                 </div>
                 <!--end col-->
@@ -202,87 +149,6 @@
         </div>
         <!--end container-->
 
-        <!-- DM modal -->
-        <div class="modal fade" id="DM_preference_modal" tabindex="-1" role="dialog"
-            aria-labelledby="DM_preferenceModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="DMModalLabel">Enable DM Options</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of DM account modal -->
-
-        <!-- WhatsApp modal -->
-        <div class="modal fade" id="whatsApp_account_modal" tabindex="-1" role="dialog"
-            aria-labelledby="whatsAppModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="whatsAppModalLabel">Enable DM for WhatsApp</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of WhatsApp account modal -->
-
-        <!-- twitter modal -->
-        <div class="modal fade" id="twitter_account_modal" tabindex="-1" role="dialog"
-            aria-labelledby="twitterModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="twitterModalLabel">Enable DM for Twitter</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of twitter account modal -->
-
-        <!-- delete account modal -->
-        <div class="modal fade" id="delete_account_modal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteModalLabel">Delete Account</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea aperiam tempora nostrum.?</p>
-                    </div>
-                    <div class="modal-footer p-0">
-                        <button type="button" class="btn btn-danger" onclick="delete_account()">Delete Account</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--end of delete account modal -->
     </section>
     <!--end section-->
     </section>
@@ -330,8 +196,7 @@
     <script src="./SMTV_assets/switcher.js.download"></script>
     <!-- Main Js -->
     <script src="./SMTV_assets/app.js.download"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/script2.js"></script>
+    <script src="./js/chart_script.js"></script>
 
 </body>
 

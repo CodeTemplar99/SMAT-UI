@@ -2163,6 +2163,8 @@ p {
   z-index: 1030;
   background-color: transparent;
   border: 0;
+  /* box-shadow: 0 5px 3px rgba(60, 72, 88, 0.15) !important; */
+  box-shadow: 0 5px 3px rgba(47, 85, 212, 0.20) !important;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }

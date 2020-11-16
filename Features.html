@@ -55,6 +55,23 @@
         .uim-quinary {
             opacity: var(--uim-quinary-opacity);
         }
+
+        @media screen and (max-width:425px) {
+
+            .title1,
+            .title2,
+            .title3 {
+                text-align: center !important;
+            }
+            #row1, #row2, #row3{
+                margin-bottom: 4rem !important;
+            }
+            #row2 {
+                flex-direction: column-reverse;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -117,11 +134,12 @@
     <!-- Hero Start -->
     <section class="bg-half-170 d-table w-100">
         <div class="container">
-            <div class="row align-items-center mb-3">
+            <div class="row align-items-center mb-3" id="row1">
                 <div class="col-md-7">
                     <div class="title-heading mt-4 col-lg-12">
-                        <h3 class="display-5 font-weight-bold mb-1">Lorem, ipsum</h3>
-                        <p class="para-desc text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                        <h3 class="display-5 font-weight-bold mb-1 title1">Lorem, ipsum</h3>
+                        <p class="para-desc text-muted write1">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Nulla
                             natus ad, consectetur dolore accusantium repellendus.</p>
                     </div>
                 </div>
@@ -134,15 +152,16 @@
             </div>
             <!--end row-->
 
-             <div class="row align-items-center justify-content-between mb-3">
+            <div class="row align-items-center justify-content-between mb-3" id="row2">
                 <div class="col-md-5">
                     <img src="./images/undraw_Personal_text_re_vqj3.svg" class="img-fluid" alt="">
                 </div>
                 <!--end col-->
                 <div class="col-md-7">
                     <div class="title-heading mt-4 col-lg-12">
-                        <h3 class="display-5 font-weight-bold mb-1 text-right">Lorem, ipsum</h3>
-                        <p class="para-desc text-muted text-right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                        <h3 class="display-5 font-weight-bold mb-1 title2">Lorem, ipsum</h3>
+                        <p class="para-desc text-muted write2">Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Nulla
                             natus ad, consectetur dolore accusantium repellendus.</p>
                     </div>
                 </div>
@@ -150,12 +169,13 @@
 
             </div>
             <!--end row-->
-            
-             <div class="row align-items-center mb-3">
+
+            <div class="row align-items-center mb-3" id="row3">
                 <div class="col-md-7">
                     <div class="title-heading mt-4 col-lg-12">
-                        <h3 class="display-5 font-weight-bold mb-1">Lorem, ipsum</h3>
-                        <p class="para-desc text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                        <h3 class="display-5 font-weight-bold mb-1 title3">Lorem, ipsum</h3>
+                        <p class="para-desc text-muted write3">Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Nulla
                             natus ad, consectetur dolore accusantium repellendus.</p>
                     </div>
                 </div>
@@ -172,7 +192,7 @@
         <!--end container-->
     </section>
     <!--end section-->
-   
+
 
     <!-- Footer Start -->
     <footer class="footer">

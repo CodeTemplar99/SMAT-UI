@@ -4961,6 +4961,23 @@ p {
   left: 28% !important;
 }
 
+#topnav .buy-button {
+  display: none;
+}
+
+.menu-extras {
+  display: block !important;
+}
+
+#topnav .buy-menu-btn {
+  display: block !important;
+  margin: 0 10px;
+  padding: 10px 20px;
+}
+
+#topnav .navbar-toggle .lines {
+  margin-right: 0 !important;
+}
 .main-view{
   margin-left:0px !important;
   margin-right:0px !important;
